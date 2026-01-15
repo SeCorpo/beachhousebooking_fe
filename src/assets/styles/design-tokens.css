@@ -1,0 +1,192 @@
+/*! ============================================== */
+/*! Design Tokens generated with design-tokens.dev */
+/*! ============================================== */
+
+/* Core */
+
+:root {
+  /* root */
+  --semko-root-size: 16px;
+}
+
+/* Palette */
+
+:root {
+  /* primary */
+  --semko-color-primary: #0e2a3a;
+  --semko-color-primary-rgb: 14, 42, 58;
+  --semko-color-primary-contrast: var(--semko-color-contrast-dark);
+  --semko-color-primary-contrast-rgb: 240, 240, 240;
+  --semko-color-primary-tint: #596a76;
+  --semko-color-primary-shade: #0e1e28;
+  --semko-color-primary-tone: #354550;
+
+  /* secondary */
+  --semko-color-secondary: #f4efea;
+  --semko-color-secondary-rgb: 244, 239, 234;
+  --semko-color-secondary-contrast: var(--semko-color-contrast-light);
+  --semko-color-secondary-contrast-rgb: 18, 18, 18;
+  --semko-color-secondary-tint: #f8f4f1;
+  --semko-color-secondary-shade: #9b9895;
+  --semko-color-secondary-tone: #ccc9c5;
+
+  /* accent */
+  --semko-color-accent: #c9a45c;
+  --semko-color-accent-rgb: 201, 164, 92;
+  --semko-color-accent-contrast: var(--semko-color-contrast-light);
+  --semko-color-accent-contrast-rgb: 18, 18, 18;
+  --semko-color-accent-tint: #ddc191;
+  --semko-color-accent-shade: #816a3e;
+  --semko-color-accent-tone: #b29869;
+
+  /* util-info */
+  --semko-color-util-info: #5f8fa3;
+  --semko-color-util-info-rgb: 95, 143, 163;
+  --semko-color-util-info-contrast: var(--semko-color-contrast-light);
+  --semko-color-util-info-contrast-rgb: 18, 18, 18;
+  --semko-color-util-info-tint: #94b3c1;
+  --semko-color-util-info-shade: #405d6a;
+  --semko-color-util-info-tone: #6c8a97;
+
+  /* util-safe */
+  --semko-color-util-safe: #5f7f6e;
+  --semko-color-util-safe-rgb: 95, 127, 110;
+  --semko-color-util-safe-contrast: var(--semko-color-contrast-dark);
+  --semko-color-util-safe-contrast-rgb: 240, 240, 240;
+  --semko-color-util-safe-tint: #92a89c;
+  --semko-color-util-safe-shade: #405349;
+  --semko-color-util-safe-tone: #6a7f74;
+
+  /* util-warning */
+  --semko-color-util-warning: #c78a3a;
+  --semko-color-util-warning-rgb: 199, 138, 58;
+  --semko-color-util-warning-contrast: var(--semko-color-contrast-light);
+  --semko-color-util-warning-contrast-rgb: 18, 18, 18;
+  --semko-color-util-warning-tint: #deb07b;
+  --semko-color-util-warning-shade: #815a2a;
+  --semko-color-util-warning-tone: #b28754;
+
+  /* util-alert */
+  --semko-color-util-alert: #9c3a3a;
+  --semko-color-util-alert-rgb: 156, 58, 58;
+  --semko-color-util-alert-contrast: var(--semko-color-contrast-dark);
+  --semko-color-util-alert-contrast-rgb: 240, 240, 240;
+  --semko-color-util-alert-tint: #c27b76;
+  --semko-color-util-alert-shade: #662a28;
+  --semko-color-util-alert-tone: #975450;
+
+  /* gamma */
+  --semko-color-gamma-950: #ffffff;
+  --semko-color-gamma-900: #f0f0f0;
+  --semko-color-gamma-850: #e1e1e1;
+  --semko-color-gamma-800: #d2d2d2;
+  --semko-color-gamma-750: #c3c3c3;
+  --semko-color-gamma-700: #b5b5b5;
+  --semko-color-gamma-650: #a7a7a7;
+  --semko-color-gamma-600: #999999;
+  --semko-color-gamma-550: #8b8b8b;
+  --semko-color-gamma-500: #7e7e7e;
+  --semko-color-gamma-450: #707070;
+  --semko-color-gamma-400: #636363;
+  --semko-color-gamma-350: #575757;
+  --semko-color-gamma-300: #4a4a4a;
+  --semko-color-gamma-250: #3e3e3e;
+  --semko-color-gamma-200: #333333;
+  --semko-color-gamma-150: #272727;
+  --semko-color-gamma-100: #1d1d1d;
+  --semko-color-gamma-050: #121212;
+  --semko-color-gamma-000: #000000;
+
+  /* base */
+  --semko-color-base-light: var(--semko-color-gamma-800);
+  --semko-color-base-light-rgb: 210, 210, 210;
+  --semko-color-base-dark: var(--semko-color-gamma-150);
+  --semko-color-base-dark-rgb: 39, 39, 39;
+
+  /* contrast */
+  --semko-color-contrast-light: var(--semko-color-gamma-050);
+  --semko-color-contrast-light-rgb: 18, 18, 18;
+  --semko-color-contrast-dark: var(--semko-color-gamma-900);
+  --semko-color-contrast-dark-rgb: 240, 240, 240;
+
+  /* text */
+  --semko-color-text-strong: var(--semko-color-gamma-050);
+  --semko-color-text-regular: var(--semko-color-gamma-150);
+  --semko-color-text-subtle: var(--semko-color-gamma-250);
+  --semko-color-text-accent: var(--semko-color-primary-tone);
+}
+
+/* Content */
+
+:root {
+  /* font-size */
+  --semko-font-size-xs: 0.694rem;
+  --semko-font-size-s: 0.833rem;
+  --semko-font-size-n: 1rem;
+  --semko-font-size-l: 1.2rem;
+  --semko-font-size-xl: 1.44rem;
+  --semko-font-size-xxl: 1.728rem;
+
+  /* icon-size */
+  --semko-icon-size-xs: 0.867rem;
+  --semko-icon-size-s: 1.041rem;
+  --semko-icon-size-n: 1.25rem;
+  --semko-icon-size-l: 1.5rem;
+  --semko-icon-size-xl: 1.8rem;
+  --semko-icon-size-xxl: 2.16rem;
+
+  /* line-height */
+  --semko-line-height-tight: 1.2;
+  --semko-line-height-regular: 1.6;
+  --semko-line-height-loose: 2.133;
+}
+
+/* Space */
+
+:root {
+  /* spacing */
+  --semko-space-012: 0.125rem;
+  --semko-space-025: 0.25rem;
+  --semko-space-050: 0.5rem;
+  --semko-space-075: 0.75rem;
+  --semko-space-100: 1rem;
+  --semko-space-125: 1.25rem;
+  --semko-space-150: 1.5rem;
+  --semko-space-175: 1.75rem;
+  --semko-space-200: 2rem;
+
+  /* local */
+  --semko-side-gap: var(--semko-space-100);
+  --semko-col-gap: var(--semko-space-100);
+  --semko-width-min: 360px;
+  --semko-width-max: 1200px;
+
+  /* media */
+  --semko-max-width-medium: 768px;
+  --semko-max-width-small: 480px;
+}
+
+/* Details */
+
+:root {
+  /* radius */
+  --semko-radius-small: 0.25rem;
+  --semko-radius-medium: 0.5rem;
+  --semko-radius-large: 1rem;
+  --semko-radius-round: 50%;
+  --semko-radius-pill: 9999px;
+
+  /* shadow */
+  --semko-shadow-color: #0e2a3a;
+  --semko-shadow-color-rgb: 14, 42, 58;
+  --semko-shadow-small: 0px 1px 1px rgba(var(--semko-shadow-color-rgb), 0.2), 0px 1px 2px -0.5px rgba(var(--semko-shadow-color-rgb), 0.45), 0px 1px 4px -3px rgba(var(--semko-shadow-color-rgb), 0.35);
+  --semko-shadow-medium: 0px 1px 1px -0.5px rgba(var(--semko-shadow-color-rgb), 0.1), 0px 1px 2px -1px rgba(var(--semko-shadow-color-rgb), 0.25), 0px 2px 3px -1.5px rgba(var(--semko-shadow-color-rgb), 0.3), 0px 5px 6px -2px rgba(var(--semko-shadow-color-rgb), 0.4);
+  --semko-shadow-large: 0px 0.5px 0.5px rgba(var(--semko-shadow-color-rgb), 0.2), 0px 2px 2px -0.5px rgba(var(--semko-shadow-color-rgb), 0.25), 0px 5px 6px -1px rgba(var(--semko-shadow-color-rgb), 0.25), 0px 8px 9px -1px rgba(var(--semko-shadow-color-rgb), 0.3), 0px 12px 14px -2px rgba(var(--semko-shadow-color-rgb), 0.3), 0px 16px 20px -3px rgba(var(--semko-shadow-color-rgb), 0.25);
+
+  /* duration */
+  --semko-duration-instant: 0.118s;
+  --semko-duration-short: 0.158s;
+  --semko-duration-regular: 0.210s;
+  --semko-duration-long: 0.280s;
+  --semko-duration-extra: 0.373s;
+}

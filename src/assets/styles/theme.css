@@ -1,0 +1,117 @@
+/* --------------------------------
+   Theme & semantic layer
+--------------------------------- */
+
+:root {
+  color-scheme: light dark;
+
+  /*!* media *!*/
+  /*--max-width-medium: 768px;*/
+  /*--max-width-small: 480px;*/
+
+  /* --------------------------------
+     Surfaces
+  --------------------------------- */
+  --surface-page: var(--semko-color-gamma-950);
+  --surface-base: var(--semko-color-gamma-900);
+  --surface-section: var(--semko-color-gamma-850);
+  --surface-elevated: var(--semko-color-gamma-800);
+  --surface-overlay: rgba(0, 0, 0, 0.6);
+
+  /* --------------------------------
+     Text
+  --------------------------------- */
+  --text-primary: var(--semko-color-text-regular);
+  --text-secondary: var(--semko-color-text-subtle);
+  --text-muted: var(--semko-color-gamma-350);
+  --text-strong: var(--semko-color-text-strong);
+  --text-inverse: var(--semko-color-contrast-dark);
+  --text-accent: var(--semko-color-text-accent);
+  --text-code: rgba(var(--semko-color-gamma-000), 0.05);
+
+  /* --------------------------------
+     Borders & dividers
+  --------------------------------- */
+  --border-default: rgba(0, 0, 0, 0.08);
+  --border-weak: rgba(0, 0, 0, 0.05);
+  --border-strong: rgba(0, 0, 0, 0.12);
+
+  /* --------------------------------
+     Brand & actions
+  --------------------------------- */
+  --brand-primary: var(--semko-color-primary);
+  --brand-primary-hover: var(--semko-color-primary-shade);
+  --brand-primary-muted: var(--semko-color-primary-tone);
+  --brand-on-primary: var(--semko-color-primary-contrast);
+
+  --brand-accent: var(--semko-color-accent);
+  --brand-on-accent: var(--semko-color-accent-contrast);
+
+  /* --------------------------------
+     Status
+  --------------------------------- */
+  --status-info: var(--semko-color-util-info);
+  --status-success: var(--semko-color-util-safe);
+  --status-warning: var(--semko-color-util-warning);
+  --status-danger: var(--semko-color-util-alert);
+
+  --status-on-info: var(--semko-color-util-info-contrast);
+  --status-on-success: var(--semko-color-util-safe-contrast);
+  --status-on-warning: var(--semko-color-util-warning-contrast);
+  --status-on-danger: var(--semko-color-util-alert-contrast);
+
+  /* --------------------------------
+     Shadows
+  --------------------------------- */
+  --semko-shadow-color: var(--semko-shadow-color);
+  --shadow-sm: var(--semko-shadow-small);
+  --shadow-md: var(--semko-shadow-medium);
+  --shadow-lg: var(--semko-shadow-large);
+
+  /* --------------------------------
+     Motion
+  --------------------------------- */
+  --transition-fast: var(--semko-duration-short);
+  --transition-base: background-color var(--semko-duration-regular),
+  color var(--semko-duration-regular),
+  border-color var(--semko-duration-regular),
+  box-shadow var(--semko-duration-regular);
+
+  /* --------------------------------
+     Focus
+  --------------------------------- */
+  --focus-ring: 0 0 0 3px rgba(var(--semko-color-primary-rgb), 0.35);
+
+  /* --------------------------------
+     Typography
+  --------------------------------- */
+  --font-family-base: ui-sans-serif, system-ui, -apple-system,
+  BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --font-family-mono: ui-monospace, SFMono-Regular,
+  Menlo, Monaco, Consolas, monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/* Dark theme overrides */
+:root[data-theme="dark"] {
+  --surface-page: var(--semko-color-gamma-050);
+  --surface-base: var(--semko-color-gamma-100);
+  --surface-section: var(--semko-color-gamma-150);
+  --surface-elevated: var(--semko-color-gamma-200);
+
+  --text-primary: var(--semko-color-gamma-900);
+  --text-secondary: var(--semko-color-gamma-700);
+  --text-muted: var(--semko-color-gamma-500);
+  --text-strong: var(--semko-color-gamma-950);
+
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-weak: rgba(255, 255, 255, 0.04);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --semko-shadow-color: var(--semko-color-gamma-000);
+}

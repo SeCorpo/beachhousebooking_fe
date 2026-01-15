@@ -1,0 +1,208 @@
+/* --------------------------------
+   Global layout tokens
+--------------------------------- */
+
+:root {
+  --header-height: 64px;
+  --layout-gap: var(--semko-space-100);
+  --panel-padding: var(--semko-space-100);
+
+  --nav-width: 260px;
+  --main-min-width: 640px;
+  --main-max-width: 1080px;
+  --aside-width: 320px;
+
+  /* Global radius */
+  --radius-global: var(--semko-radius-medium);
+}
+
+/* --------------------------------
+   Root
+--------------------------------- */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------
+   Header
+--------------------------------- */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  height: var(--header-height);
+  padding-inline: var(--layout-gap);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--layout-gap);
+
+  background-color: var(--surface-base);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Header content helpers */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--semko-space-075);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--semko-space-075);
+}
+
+/* --------------------------------
+   App layout grid (below header)
+--------------------------------- */
+
+.app-layout {
+  flex: 1;
+  display: grid;
+
+  grid-template-columns:
+          var(--nav-width)
+          minmax(var(--main-min-width), var(--main-max-width))
+          1fr
+          var(--aside-width);
+
+  grid-template-rows: 1fr;
+
+  gap: var(--layout-gap);
+  padding: var(--layout-gap);
+  box-sizing: border-box;
+}
+
+/* --------------------------------
+   Layout slots
+--------------------------------- */
+
+nav {
+  grid-column: 1;
+  background-color: var(--surface-section);
+  border-radius: var(--radius-global);
+  padding: var(--panel-padding);
+}
+
+main {
+  grid-column: 2;
+
+  background-color: var(--surface-base);
+  border-radius: var(--radius-global);
+  padding: var(--panel-padding);
+
+  width: 100%;
+  min-width: var(--main-min-width);
+  max-width: var(--main-max-width);
+}
+
+aside {
+  grid-column: 4;
+  background-color: var(--surface-section);
+  border-radius: var(--radius-global);
+  padding: var(--panel-padding);
+}
+
+/* --------------------------------
+   JS-controlled visibility
+--------------------------------- */
+
+nav,
+main,
+aside {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.has-aside nav,
+.has-main main,
+.has-info aside {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --------------------------------
+   Manager button
+--------------------------------- */
+
+.app-manage {
+  position: fixed;
+  right: var(--layout-gap);
+  bottom: var(--layout-gap);
+  z-index: 50;
+}
+
+/* Button rules */
+button {
+  border-radius: 0; /* square */
+}
+
+@media (max-width: 1300px) {
+  .app-layout {
+    grid-template-columns:
+            2fr
+            5fr
+            3fr;
+  }
+
+  nav,
+  main,
+  aside {
+    min-width: 0;
+    max-width: none;
+  }
+
+  aside {
+    grid-column: 3;
+  }
+}
+
+/* --------------------------------
+   Mobile layout
+--------------------------------- */
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 56px;
+    --panel-padding: var(--semko-space-075);
+  }
+
+  .app-layout {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  /* nav goes into hamburger */
+  nav {
+    display: none;
+  }
+
+  main {
+    grid-column: 1;
+    min-width: 0;
+    max-width: none;
+    order: 1;
+  }
+
+  aside {
+    grid-column: 1;
+    order: 2;
+  }
+
+  .app-manage {
+    display: none;
+  }
+
+  button {
+    width: 100%;
+  }
+}

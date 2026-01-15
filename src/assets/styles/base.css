@@ -1,0 +1,168 @@
+/* --------------------------------
+   Base / global styles
+--------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+
+  background-color: var(--surface-page);
+  color: var(--text-primary);
+
+  font-family: var(--font-family-base), sans-serif;
+  font-size: var(--semko-font-size-n);
+  line-height: var(--semko-line-height-regular);
+  font-weight: var(--font-weight-regular);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: var(--transition-base);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100%;
+}
+
+/* Media defaults */
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Buttons reset */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Focus */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* --------------------------------
+   Typography
+--------------------------------- */
+
+h1,
+h2,
+h3 {
+  margin-block: var(--semko-space-050);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-strong);
+  line-height: var(--semko-line-height-tight);
+}
+
+h1 {
+  font-size: var(--semko-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--semko-font-size-xl);
+}
+
+h3 {
+  font-size: var(--semko-font-size-l);
+}
+
+p {
+  margin-block: var(--semko-space-050) var(--semko-space-100);
+  color: var(--text-secondary);
+}
+
+small {
+  font-size: var(--semko-font-size-s);
+  color: var(--text-secondary);
+}
+
+strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-strong);
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: var(--font-family-mono), monospace;
+  font-size: 0.95em;
+  padding: 0.15em 0.35em;
+  border-radius: var(--semko-radius-small);
+  background-color: var(--text-code);
+}
+
+.highlight-text {
+  padding: 0.15em 0.35em;
+  background-color: var(--surface-section);
+}
+
+/* --------------------------------
+   Responsive typography
+--------------------------------- */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc(var(--semko-font-size-xxl) * 0.9);
+  }
+
+  h2 {
+    font-size: calc(var(--semko-font-size-xl) * 0.9);
+  }
+
+  h3 {
+    font-size: calc(var(--semko-font-size-l) * 0.95);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: calc(var(--semko-font-size-xxl) * 0.8);
+  }
+
+  h2 {
+    font-size: calc(var(--semko-font-size-xl) * 0.8);
+  }
+
+  h3 {
+    font-size: calc(var(--semko-font-size-l) * 0.9);
+  }
+}
