@@ -1,37 +1,28 @@
 import React from "react";
+// import {useState} from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import "./assets/styles/design-tokens.css"
 import "./assets/styles/theme.css"
 import "./assets/styles/base.css"
 import "./assets/styles/layout.css"
 
+import TestPage from "./pages/test/testPage.jsx";
+import EmptyPage from "./pages/empty/emptyPage.jsx";
+
 function App() {
+    // const [loggedIn, setLoggedIn] = useState(false);
+    // const [afterLoginUrl, setAfterLoginUrl] = useState("");
+
   return (
-      <div className="has-aside has-main has-info">
-        <header>
-          <div className="header-left">
-            <button className="hamburger">☰</button>
-            <strong>Page title</strong>
-          </div>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/test" element={<TestPage />} />
+              <Route path="/" element={<EmptyPage />} />
+              {/*<Route path="/p/:beachhousename" element={<ReservationController />} />*/}
 
-          <div className="header-right">
-            <select>
-              <option>EN</option>
-              <option>NL</option>
-            </select>
-          </div>
-        </header>
-
-        <div className="app-layout">
-          <nav>Menu</nav>
-          <main>Main</main>
-          <aside>Info</aside>
-        </div>
-
-        <div className="app-manage">
-          <button className="btn">Manage</button>
-        </div>
-      </div>
+          </Routes>
+      </BrowserRouter>
   );
 }
 

@@ -112,23 +112,6 @@ aside {
   padding: var(--panel-padding);
 }
 
-/* --------------------------------
-   JS-controlled visibility
---------------------------------- */
-
-nav,
-main,
-aside {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.has-aside nav,
-.has-main main,
-.has-info aside {
-  opacity: 1;
-  pointer-events: auto;
-}
 
 /* --------------------------------
    Manager button
@@ -179,11 +162,6 @@ button {
   .app-layout {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-  }
-
-  /* nav goes into hamburger */
-  nav {
-    display: none;
   }
 
   main {
