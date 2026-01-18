@@ -17,8 +17,8 @@ function App() {
   return (
       <BrowserRouter>
           <Routes>
-              <Route path="/test" element={<TestPage />} />
-              <Route path="/" element={<EmptyPage />} />
+              <Route path="/" element={<TestPage />} />
+              <Route path="/mt" element={<EmptyPage />} />
               {/*<Route path="/p/:beachhousename" element={<ReservationController />} />*/}
 
           </Routes>

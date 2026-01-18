@@ -23,7 +23,7 @@ export default function Nav({
                 return mobileNow;
             });
         };
-
+        checkMobile();
         window.addEventListener("resize", checkMobile);
         return () => window.removeEventListener("resize", checkMobile);
     }, []);

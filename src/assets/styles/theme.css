@@ -72,6 +72,7 @@
      Motion
   --------------------------------- */
   --transition-fast: var(--semko-duration-short);
+  --transition-normal: var(--semko-duration-regular);
   --transition-base: background-color var(--semko-duration-regular),
   color var(--semko-duration-regular),
   border-color var(--semko-duration-regular),

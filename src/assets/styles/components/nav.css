@@ -141,7 +141,7 @@ nav {
 
     box-shadow: 0 -6px 16px rgba(0, 0, 0, 0.25);
 
-    animation: navSlideUp 0.28s ease;
+    animation: navSlideUp var(--transition-normal) ease;
   }
 
   .nav-mobile .nav-list {
@@ -157,7 +157,13 @@ nav {
   }
 
   @keyframes navSlideUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
+    from {
+      transform: translateY(100%);
+      opacity: 0.8;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
