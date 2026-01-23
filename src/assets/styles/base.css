@@ -47,21 +47,21 @@ canvas {
 }
 
 /* Forms */
-button,
-input,
-select,
-textarea {
-  font: inherit;
-  color: inherit;
-}
+/*button,*/
+/*input,*/
+/*select,*/
+/*textarea {*/
+/*  font: inherit;*/
+/*  color: inherit;*/
+/*}*/
 
-/* Buttons reset */
-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
+/*!* Buttons reset *!*/
+/*button {*/
+/*  background: none;*/
+/*  border: none;*/
+/*  padding: 0;*/
+/*  cursor: pointer;*/
+/*}*/
 
 /* Focus */
 :focus-visible {

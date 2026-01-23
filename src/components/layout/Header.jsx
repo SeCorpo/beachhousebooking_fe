@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Header({ title }) {
     return (
-        <header>
+        <header className="app-header">
             <div className="header-left">
                 <strong>{title}</strong>
             </div>

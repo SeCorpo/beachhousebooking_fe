@@ -39,7 +39,7 @@ export default function Nav({
                     </button>
 
                     { isOpen && (
-                        <nav aria-label={ariaLabel} className={`nav-mobile ${className}`.trim()}>
+                        <nav aria-label={ariaLabel} className={`app-nav nav-mobile ${className}`.trim()}>
                             <ul className="nav-list" role="list">
                                 {children}
                             </ul>
@@ -47,7 +47,7 @@ export default function Nav({
                     )}
                 </>
             ) : (
-                <nav aria-label={ariaLabel} className={className}>
+                <nav aria-label={ariaLabel} className={`app-nav ${className}`}>
                     <ul className="nav-list" role="list">
                         {children}
                     </ul>

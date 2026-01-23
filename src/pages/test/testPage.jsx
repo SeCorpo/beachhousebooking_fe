@@ -34,11 +34,11 @@ export default function TestPage() {
                     </NavItem>
                 </Nav>
 
-                <main>
+                <main className="app-main">
                     Main
                 </main>
 
-                <aside>
+                <aside className="app-aside">
                     Aside (for extra info)
                 </aside>
             </div>

@@ -7,7 +7,7 @@ export default function EmptyPage() {
         <>
             <Header title="BeachHouseBooking" />
             <div className="app-layout">
-                <main>
+                <main className="app-main">
                     Welcome
                 </main>
             </div>
