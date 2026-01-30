@@ -1,0 +1,123 @@
+.loading-animation {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1000;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 10px;
+  border-radius: var(--semko-radius-pill);
+
+  /* “glass chip” */
+  background: var(--status-info);
+  border: 1px solid var(--border-default);
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+          0 8px 18px rgba(0, 0, 0, 0.22),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  user-select: none;
+  pointer-events: none; /* never blocks clicks */
+}
+
+/* Tiny orbit animation */
+.loading-animation__orbit {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+
+  position: relative;
+  display: inline-block;
+
+  /* subtle ring */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.04);
+}
+
+.loading-animation__orbit::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+
+  transform: translate(-50%, -50%) translateX(8px);
+}
+
+.loading-animation__orbit::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 999px;
+
+  /* spinning “sweep” highlight */
+  background: conic-gradient(
+          from 90deg,
+          rgba(255, 255, 255, 0.0) 0deg,
+          rgba(255, 255, 255, 0.0) 260deg,
+          rgba(255, 255, 255, 0.22) 320deg,
+          rgba(255, 255, 255, 0.0) 360deg
+  );
+
+  animation: loading-orbit-spin 1.05s linear infinite;
+  mask: radial-gradient(circle, transparent 58%, #000 60%);
+  -webkit-mask: radial-gradient(circle, transparent 58%, #000 60%);
+}
+
+@keyframes loading-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-animation__text {
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+/* Mobile: even smaller + optionally hide label */
+@media (max-width: 768px) {
+  .loading-animation {
+    right: auto;
+    left: 12px;
+    bottom: 16px;
+    padding: 7px 9px;
+    gap: 8px;
+  }
+
+  .loading-animation__orbit {
+    width: 16px;
+    height: 16px;
+  }
+
+  .loading-animation__text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-animation {
+    bottom: 16px;
+    left: 12px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .loading-animation__orbit::after {
+    animation: none;
+  }
+}
