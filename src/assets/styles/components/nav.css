@@ -13,6 +13,7 @@
 
   display: grid;
   gap: var(--semko-space-075);
+  padding-block: var(--semko-space-150);  /* add space top and bottom in nav */
 }
 
 .nav-item {

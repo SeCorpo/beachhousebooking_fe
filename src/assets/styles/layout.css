@@ -91,6 +91,7 @@ body {
   background-color: var(--surface-section);
   border-radius: var(--radius-global);
   padding: var(--panel-padding);
+  align-self: start;  /* to not stretch to the same height as main and aside*/
 }
 
 .app-main {
