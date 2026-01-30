@@ -1,0 +1,205 @@
+/* --------------------------------
+   Forms layout
+--------------------------------- */
+
+.app-form {
+  display: grid;
+  gap: var(--semko-space-100);
+  width: 100%;
+  max-width: 720px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Optional: a tiny helper class for card spacing */
+.form-card {
+  display: grid;
+  gap: var(--semko-space-075);
+}
+
+/* --------------------------------
+   Titles
+--------------------------------- */
+
+.form-title {
+  margin: 0;
+  color: var(--text-strong);
+}
+
+/* --------------------------------
+   Grids
+--------------------------------- */
+
+.form-grid {
+  display: grid;
+  gap: var(--semko-space-075);
+}
+
+.form-grid--name {
+  grid-template-columns: 1.2fr 0.8fr 1.2fr;
+}
+
+.form-grid--address {
+  grid-template-columns: 1.5fr 0.7fr;
+}
+
+.form-grid--contact {
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-grid--guests {
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+
+.form-span-2 {
+  grid-column: 1 / -1;
+}
+
+/* --------------------------------
+   Labels
+--------------------------------- */
+
+.app-form label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--semko-space-025);
+
+  font-size: var(--semko-font-size-s);
+  color: var(--text-secondary);
+}
+
+/* --------------------------------
+   Inputs
+--------------------------------- */
+
+.app-form input[type="text"],
+.app-form input[type="email"],
+.app-form input[type="password"],
+.app-form input[type="number"],
+.app-form textarea,
+.app-form select {
+  width: 100%;
+  padding: var(--semko-space-050) var(--semko-space-075);
+
+  border-radius: var(--semko-radius-medium);
+  border: 1px solid var(--border-default);
+
+  background-color: var(--surface-section);
+  color: var(--text-primary);
+
+  font: inherit;
+  box-sizing: border-box;
+
+  transition:
+          border-color var(--semko-duration-regular),
+          box-shadow var(--semko-duration-regular),
+          background-color var(--semko-duration-regular);
+}
+
+.app-form input::placeholder,
+.app-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* --------------------------------
+   Focus
+--------------------------------- */
+
+.app-form input:focus-visible,
+.app-form textarea:focus-visible,
+.app-form select:focus-visible {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: var(--focus-ring);
+  background-color: var(--surface-base);
+}
+
+/* --------------------------------
+   Textarea specifics
+--------------------------------- */
+
+.app-form textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+/* --------------------------------
+   Checkbox row
+--------------------------------- */
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--semko-space-075);
+  padding: var(--semko-space-050) var(--semko-space-075);
+
+  border-radius: var(--semko-radius-medium);
+  border: 1px solid var(--border-default);
+  background-color: var(--surface-section);
+}
+
+.form-checkbox__label {
+  font-size: var(--semko-font-size-s);
+  color: var(--text-secondary);
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand-primary);
+}
+
+/* --------------------------------
+   Disabled
+--------------------------------- */
+
+.app-form input:disabled,
+.app-form textarea:disabled,
+.app-form select:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* --------------------------------
+   Responsive
+--------------------------------- */
+
+@media (max-width: 768px) {
+  .app-form {
+    gap: var(--semko-space-075);
+    max-width: 100%;
+  }
+
+  .form-grid--name,
+  .form-grid--address,
+  .form-grid--contact,
+  .form-grid--guests {
+    grid-template-columns: 1fr;
+  }
+
+  .form-span-2 {
+    grid-column: auto;
+  }
+}
+
+.form-required {
+  color: var(--status-danger);
+  font-weight: var(--font-weight-semibold);
+}
+
+.form-optional {
+  color: var(--text-muted);
+  font-weight: var(--font-weight-regular);
+  margin-left: var(--semko-space-025);
+}
+
+.form-required-hint {
+  margin: var(--semko-space-075) 0 0;
+  color: var(--text-secondary);
+  font-size: var(--semko-font-size-s);
+}

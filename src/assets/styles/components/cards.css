@@ -1,0 +1,60 @@
+/* --------------------------------
+   Base card (static)
+--------------------------------- */
+
+.card {
+  padding: var(--semko-space-100);
+  border-radius: var(--semko-radius-medium);
+
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+
+  align-self: start;
+}
+
+/* --------------------------------
+   Interactive / hover-lift card
+--------------------------------- */
+
+.card-wobbly {
+  padding: var(--semko-space-100);
+  border-radius: var(--semko-radius-medium);
+
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+
+  box-shadow: var(--shadow-md);
+  transition:
+          transform var(--transition-fast),
+          box-shadow var(--semko-duration-regular),
+          background-color var(--semko-duration-regular);
+
+  align-self: start;
+}
+
+.card-wobbly:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --------------------------------
+   Responsive
+--------------------------------- */
+
+@media (max-width: 768px) {
+  .card,
+  .card-wobbly {
+    padding: var(--semko-space-075);
+  }
+}
+
+@media (max-width: 480px) {
+  .card,
+  .card-wobbly {
+    padding: var(--semko-space-075);
+    box-shadow: var(--shadow-sm);
+  }
+}

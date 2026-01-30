@@ -1,0 +1,20 @@
+.button-1 {
+  background: var(--brand-primary);
+  color: var(--brand-on-primary);
+  cursor: pointer;
+  border: grey solid 1px;
+  width: 6rem;
+  height: 2rem;
+  font-weight: bold;
+  overflow: hidden;
+  margin: 16px;
+}
+.button-1:hover {
+  background: var(--brand-primary-hover);
+}
+
+.button-1:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
