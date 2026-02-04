@@ -91,7 +91,7 @@ body {
   background-color: var(--surface-section);
   border-radius: var(--radius-global);
   padding: var(--panel-padding);
-  align-self: start;  /* to not stretch to the same height as main and aside*/
+  align-self: start;  /* to not stretch to the same height as main */
 }
 
 .app-main {
@@ -111,6 +111,7 @@ body {
   background-color: var(--surface-section);
   border-radius: var(--radius-global);
   padding: var(--panel-padding);
+  align-self: start;  /* to not stretch to the same height as main */
 }
 
 
@@ -169,16 +170,24 @@ body {
     grid-column: 1;
     min-width: 0;
     max-width: none;
-    order: 1;
+    order: 2;
   }
 
   .app-aside {
     grid-column: 1;
-    order: 2;
+    order: 1;
+  }
+
+  .app-aside-hidden-on-mobile {
+    display: none;
   }
 
   .app-manage {
     display: none;
+  }
+
+  .app-main.step-date {
+    order: 1;
   }
 
   /*button {*/

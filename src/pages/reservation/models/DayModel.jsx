@@ -1,13 +1,15 @@
 
 export default class DayModel {
-    // Partial model, use AvailabilityModel directly
     constructor(
-        day,
-        availability,
-        price = null,
+        dayIso,
+        price = null
     ) {
-        this.day = day;
-        this.availability = availability;
+        // dayIso: "YYYY-MM-DD"
+        this.day = dayIso;
         this.price = price;
+    }
+
+    static fromApi(dto) {
+        return new DayModel(dto.day, dto.price != null ? Number(dto.price) : null);
     }
 }

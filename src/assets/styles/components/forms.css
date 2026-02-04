@@ -50,7 +50,18 @@
 
 .form-grid--guests {
   grid-template-columns: 1fr 1fr;
-  align-items: end;
+  align-items: start;
+}
+
+/* Ensure consistent layout inside each guest label */
+.form-grid--guests > label {
+  display: grid;
+  grid-template-rows: auto auto auto; /* title, input, error */
+}
+
+/* Reserve space for error line so height stays equal */
+.form-grid--guests .form-error {
+  min-height: 1em;
 }
 
 .form-span-2 {
@@ -75,6 +86,7 @@
 --------------------------------- */
 
 .app-form input[type="text"],
+.app-form input[type="tel"],
 .app-form input[type="email"],
 .app-form input[type="password"],
 .app-form input[type="number"],
@@ -202,4 +214,20 @@
   margin: var(--semko-space-075) 0 0;
   color: var(--text-secondary);
   font-size: var(--semko-font-size-s);
+}
+
+.form-error {
+  display: none;
+  margin-top: 0.25rem;
+  font-size: var(--semko-font-size-s);
+  color: var(--status-danger);
+  min-height: 1em;
+}
+
+label input.touched:invalid + .form-error {
+  display: block;
+}
+
+label input.touched:invalid {
+  border-color: var(--status-danger);
 }

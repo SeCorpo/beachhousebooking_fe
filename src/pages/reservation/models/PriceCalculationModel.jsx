@@ -1,14 +1,9 @@
 
 export default class PriceCalculationModel {
-    // After a guest selects a date range an api call returns its price
-    constructor(
-        days = [],
-        cleaningFee,
-        totalPrice,
-    ) {
+    // Price is calculated locally with AvailabilityModel
+    constructor(days = [], cleaningFee = 0) {
         this.days = days;
         this.cleaningFee = cleaningFee;
-        this.totalPrice = totalPrice;
     }
 
     get numberOfDays() {
@@ -17,5 +12,9 @@ export default class PriceCalculationModel {
 
     get priceOfDaysCombined() {
         return this.days.reduce((sum, d) => sum + (d.price ?? 0), 0);
+    }
+
+    get totalPrice() {
+        return this.priceOfDaysCombined + (this.cleaningFee ?? 0);
     }
 }

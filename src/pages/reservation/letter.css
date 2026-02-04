@@ -1,0 +1,140 @@
+/* =================================
+   Shared Letter styling
+================================= */
+
+.letter {
+  display: grid;
+  gap: var(--semko-space-075);
+}
+
+/* Header */
+.letter__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--semko-space-100);
+}
+
+.letter__small {
+  margin: 0;
+  font-size: var(--semko-font-size-s);
+  color: var(--text-secondary);
+}
+
+.letter__title {
+  margin: 0;
+}
+
+.letter__date {
+  margin: 0;
+  font-size: var(--semko-font-size-s);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Body */
+.letter__body {
+  display: grid;
+  gap: var(--semko-space-075);
+}
+
+/* Allow long words / emails / names to wrap instead of stretching the layout */
+.letter__body strong,
+.letter__body p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+.letter__body p {
+  margin: 0;
+}
+
+.letter__subtitle {
+  margin: var(--semko-space-050) 0 0;
+}
+
+.letter__rule {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background: var(--border-weak);
+  margin: var(--semko-space-050) 0;
+}
+
+/* Pricing paragraph */
+.letter__pricing {
+  color: var(--text-secondary);
+}
+
+/* Text helpers */
+.letter__hint {
+  color: var(--text-secondary);
+}
+
+/* Message */
+.letter__label {
+  display: grid;
+  gap: var(--semko-space-025);
+  font-size: var(--semko-font-size-s);
+  color: var(--text-secondary);
+}
+
+.letter__textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+
+  padding: var(--semko-space-050) var(--semko-space-075);
+
+  border-radius: var(--semko-radius-medium);
+  border: 1px solid var(--border-default);
+
+  background-color: var(--surface-section);
+  color: var(--text-primary);
+
+  font: inherit;
+  box-sizing: border-box;
+
+  transition: var(--transition-base);
+}
+
+.letter__textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.letter__textarea:focus-visible {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: var(--focus-ring);
+  background-color: var(--surface-base);
+}
+
+.letter__char-count {
+  font-size: var(--semko-font-size-xs);
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* Closing */
+.letter__closing {
+  margin-top: var(--semko-space-050);
+  color: var(--text-secondary);
+}
+
+.letter__signature {
+  color: var(--text-strong);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .letter__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .letter__date {
+    white-space: normal;
+  }
+}

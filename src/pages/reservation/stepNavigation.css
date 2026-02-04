@@ -1,0 +1,10 @@
+.step-navigation {
+  display: flex;
+  align-items: center;
+  margin-top: var(--semko-space-150);
+}
+
+/* Push Next to the right */
+.step-navigation > button:last-child {
+  margin-left: auto;
+}

@@ -1,0 +1,48 @@
+
+/* ---------- custom day content (price) ---------- */
+.dates-picker__day {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 2px;
+}
+
+.dates-picker__day-number {
+  font-weight: var(--font-weight-semibold);
+  /*color: var(--text-strong);*/
+  line-height: 1;
+}
+
+.dates-picker__day-price {
+  font-size: var(--semko-font-size-xs);
+  /*color: var(--text-secondary);*/
+  line-height: 1;
+  min-height: 1em; /* keeps layout aligned when price is empty */
+}
+
+/* Theme react-day-picker to your semantic tokens */
+.dates-picker {
+
+  --rdp-accent-color: var(--brand-primary);
+  --rdp-accent-background-color: rgba(var(--semko-color-primary-rgb), 0.12);
+
+  --rdp-selected-color: var(--brand-on-primary);
+  --rdp-selected-background-color: var(--brand-primary);
+
+  --rdp-today-color: var(--brand-primary);
+
+  --rdp-outline: var(--focus-ring);
+  --rdp-cell-size: 44px;
+
+  --rdp-range_start-color: var(--brand-on-primary);
+  --rdp-range_end-color: var(--brand-on-primary);
+  --rdp-range_middle-color: var(--text-muted);
+}
+
+/* Ensure day buttons inherit your typography/colors */
+.dates-picker button {
+  font: inherit;
+  color: inherit;
+}
