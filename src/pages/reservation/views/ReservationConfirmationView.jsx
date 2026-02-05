@@ -28,7 +28,7 @@ export default function ReservationConfirmationView ({
                     isNextDisabled={isLoading}
                     onPreviousStep={onPreviousStep}
                     onNextStep={onNextStep}
-                    nextLabel="Finalize reservation"
+                    nextLabel="Place Reservation"
                 />
             </main>
 
