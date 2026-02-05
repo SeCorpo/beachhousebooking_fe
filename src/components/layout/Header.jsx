@@ -1,4 +1,5 @@
 import React from "react";
+import ThemeToggle from "../ThemeToggle.jsx";
 
 export default function Header({ title }) {
     return (
@@ -8,7 +9,8 @@ export default function Header({ title }) {
             </div>
 
             <div className="header-right">
-                Header Right: languageSwitch, maybe themeSwitch
+                <ThemeToggle />
+                Header Right: languageSwitch
             </div>
         </header>
     );

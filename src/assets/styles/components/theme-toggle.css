@@ -1,0 +1,126 @@
+/* --------------------------------
+   Theme toggle
+--------------------------------- */
+
+button.theme-toggle {
+    /* Reset */
+    font: inherit;
+    appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    gap: var(--semko-space-050);
+
+    /* Stable sizing */
+    min-height: 40px;
+    height: 40px;
+    padding-inline: var(--semko-space-075);
+
+    border-radius: var(--semko-radius-pill);
+    border: 1px solid var(--border-default);
+
+    background-color: transparent;
+    color: var(--text-primary);
+
+    line-height: 1;
+    vertical-align: middle;
+
+    transition: var(--transition-base);
+}
+
+/* --------------------------------
+   Icon container
+--------------------------------- */
+
+button.theme-toggle .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.theme-toggle .icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* --------------------------------
+   Label
+--------------------------------- */
+
+button.theme-toggle .label {
+    display: inline-block;
+    margin-left: var(--semko-space-025);
+
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--semko-font-size-s);
+
+    min-width: 5ch;
+    text-align: left;
+}
+
+/* --------------------------------
+   Focus
+--------------------------------- */
+
+button.theme-toggle:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+/* --------------------------------
+   Hover
+--------------------------------- */
+
+button.theme-toggle:hover {
+    background-color: var(--surface-section);
+    border-color: var(--border-strong);
+}
+
+/* --------------------------------
+   Responsive: tablet
+--------------------------------- */
+
+@media (max-width: 768px) {
+    button.theme-toggle {
+        min-height: 36px;
+        height: 36px;
+        padding-inline: var(--semko-space-075);
+    }
+
+    button.theme-toggle .icon {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+/* --------------------------------
+   Responsive: phone (icon only)
+--------------------------------- */
+
+@media (max-width: 480px) {
+    button.theme-toggle {
+        justify-content: center;
+        padding: var(--semko-space-050);
+        min-height: 44px;
+        height: 44px;
+    }
+
+    button.theme-toggle .icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        min-width: 1.4rem;
+        min-height: 1.4rem;
+    }
+
+    button.theme-toggle .label {
+        display: none;
+    }
+}

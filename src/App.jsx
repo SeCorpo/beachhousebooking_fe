@@ -15,21 +15,23 @@ import "./assets/styles/components/cards.css"
 import TestPage from "./pages/test/testPage.jsx";
 import EmptyPage from "./pages/empty/emptyPage.jsx";
 import ReservationController from "./pages/reservation/reservationController.jsx";
+import ThemeProvider from "./contexts/theme/ThemeProvider.jsx";
 
 function App() {
     // const [loggedIn, setLoggedIn] = useState(false);
     // const [afterLoginUrl, setAfterLoginUrl] = useState("");
 
   return (
-      <BrowserRouter>
-          <ToastContainer {...defaultOptions} />
-          <Routes>
-              <Route path="/" element={<TestPage />} />
-              <Route path="/mt" element={<EmptyPage />} />
-              <Route path="/p/:beachhousename" element={<ReservationController />} />
-
-          </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+          <BrowserRouter>
+              <ToastContainer {...defaultOptions} />
+              <Routes>
+                  <Route path="/" element={<TestPage />} />
+                  <Route path="/mt" element={<EmptyPage />} />
+                  <Route path="/p/:beachhousename" element={<ReservationController />} />
+              </Routes>
+          </BrowserRouter>
+      </ThemeProvider>
   );
 }
 
